@@ -1,0 +1,173 @@
+
+<head>
+    <title>Form to Table</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Style the form container */
+#dataForm {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the form elements */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f77c7;
+}
+
+/* Style the table */
+#dataTable {
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#dataTable th, #dataTable td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#dataTable th {
+    background-color: #3498db;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <h1>Form to Table Example</h1>
+    
+    <form id="dataForm">
+        <label for="name">Organization Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Contact No:</label>
+        <input type="number" id="age" contactNo="contact" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" address="address" required><br><br>
+        <button type="button" onclick="addToTable()">Add to Table</button>
+    </form>
+
+    <table id="dataTable" border="1">
+        <tr>
+            <th>Organization Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Address</th>
+        </tr>
+    </table>
+
+    <script>
+        // Load data from localStorage when the page loads
+        window.addEventListener('load', function () {
+            loadDataFromStorage();
+        });
+
+        function addToTable() {
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var contact = document.getElementById("age").value;
+            var address = document.getElementById("address").value;
+
+            // Get the table
+            var table = document.getElementById("dataTable");
+
+            // Insert a new row
+            var newRow = table.insertRow(-1);
+
+            // Insert cells for each data
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+
+            // Set the cell values
+            cell1.innerHTML = name;
+            cell2.innerHTML = email;
+            cell3.innerHTML = contact;
+            cell4.innerHTML = address;
+
+            // Clear the form
+            document.getElementById("dataForm").reset();
+
+            // Save data to localStorage
+            saveDataToStorage(name, email, contact, address);
+        }
+
+        function saveDataToStorage(name, email, contact, address) {
+            var savedData = JSON.parse(localStorage.getItem('savedData')) || [];
+            savedData.push({ name, email, contact, address });
+            localStorage.setItem('savedData', JSON.stringify(savedData));
+        }
+
+        function loadDataFromStorage() {
+            var savedData = JSON.parse(localStorage.getItem('savedData')) || [];
+
+            var table = document.getElementById("dataTable");
+            var tbody = table.querySelector("tbody");
+            
+            savedData.forEach(function(data) {
+                var newRow = tbody.insertRow(-1);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+                cell1.innerHTML = data.name;
+                cell2.innerHTML = data.email;
+                cell3.innerHTML = data.contact;
+                cell4.innerHTML = data.address;
+            });
+        }
+    </script>
+</body>
+</html>

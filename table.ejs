@@ -1,0 +1,58 @@
+
+<head>
+    <title>Firebase Firestore Data Table</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <h1>Firebase Firestore Data Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="data-body">
+            <!-- Data will be added here using JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+  apiKey: "AIzaSyCG76tikdNGlpMIjFcuC5kD2kBULzmCN08",
+  authDomain: "itachi-8fd80.firebaseapp.com",
+  projectId: "itachi-8fd80",
+  storageBucket: "itachi-8fd80.appspot.com",
+  messagingSenderId: "310410890850",
+  appId: "1:310410890850:web:851d11ac7e840f4d9f8b3b",
+  measurementId: "G-ZQ9X6FKGMP"
+};
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to your Firestore collection
+        const collectionRef = firebase.firestore().collection('zoro');
+
+        // Reference to the HTML table body
+        const dataBody = document.getElementById('data-body');
+
+        // Retrieve data from Firestore collection and populate the table
+        function populateTable() {
+            collectionRef.get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `<td>${data.name}</td><td>${data.email}</td>`;
+                    dataBody.appendChild(newRow);
+                });
+            }).catch((error) => {
+                console.error('Error getting documents: ', error);
+            });
+        }
+
+        // Initial population of the table
+        populateTable();
+    </script>
+</body>
+</html>

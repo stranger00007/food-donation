@@ -1,0 +1,133 @@
+
+.container {
+    width: 85%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-left: 38%;
+    position:fixed;
+}
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin:0 5px;
+    position:relative;
+    margin-right: 30px;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:cyan;
+    text-transform: uppercase;
+   margin-top: 10%;  
+}
+.navbar ul li::after{
+    content:"";
+    height:3px;
+    width:0;
+    background: black;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.content {
+    text-align: left;
+    padding: 100px 0;
+    margin-left: 100px;
+    margin-top: 8%;
+    position: fixed;
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 70px;
+    color:#26B209;
+    margin-left: -30px;
+    letter-spacing: 2px;
+}
+select {
+    width: 270px;
+    height:35px;
+    border-radius: 5px;
+}
+
+.content span {
+    color: #ff9800;
+}
+
+.content .par {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1.6;
+}
+.button{
+    margin-left: 700px;
+    margin-top: 10%;
+    border-radius:20%;
+}
+.btn{
+    display: inline-block;
+    padding: 15px 15px; 
+    background-color: transparent; 
+    color:darkorange;
+    text-decoration: none; 
+    border: 2px solid salmon;
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-size: medium;
+}
+.btn:hover {
+    background-color: salmon; 
+    color: white;
+}
+.logo{
+    margin-top: 8%;
+    margin-left: -2%;
+    width:180px;
+    height: 180px;
+    position:fixed;
+}
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+@media (min-aspect-ratio:16/9){
+    .back-video{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .back-video{
+        width: 100%;
+        height: 100%;
+    }
+}
+.title{
+    position: absolute;
+    margin-top: 0.8%;
+    margin-left: 30%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    color:darksalmon;
+    letter-spacing: 2px;
+    position:fixed;
+}

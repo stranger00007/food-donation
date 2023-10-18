@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Blog Posts</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          background-image: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/hunger.jpg?v=1697124481529');
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          text-align: center;
+          padding: 50px;
+          min-height: 100vh;
+          background-attachment: fixed;
+      } 
+      /* Additional styles to ensure the content is readable */
+      .blog h1 {
+          font-size: 32px;
+          margin: 0;
+          position: fixed;
+          margin-left: 14%;
+          
+      }
+      .blog h2{
+        font-size: 26px;
+          margin: 0;
+          position: fixed;
+          margin-left: 26%;
+          margin-top: 3%;  
+      } 
+      .container {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px;
+          margin-top: 23%;
+          position: fixed;
+      }
+      .post {
+          width: 60vh;
+          border: 1px solid #48236b;
+          border-radius: 5px;
+          padding: 1px;
+          background-color: rgba(164, 216, 247, 0.8);
+          margin: 10px;
+          height: 37vh;
+      }
+      .post:hover {
+          transform: scale(1.05); /* Zoom in on hover */
+      }
+      .join-us {
+        font-size: 50px; 
+        color: #ffcc00; 
+        text-transform: uppercase;
+        margin-top: 80px; 
+        font-weight: bold;
+        cursor: pointer; 
+        position: fixed; 
+        opacity: 0; 
+        animation: fadeInOut 3s ease infinite; 
+        margin-left: 35%;
+    }
+  @keyframes fadeInOut{
+        0%, 100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    .icon-div {
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        background: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/image-removebg-preview%20(3).png?v=1697215158419') no-repeat center center;
+        background-size: contain; /* You can use 'cover' or 'contain' as needed */
+        margin-top: 3%;
+        position: relative;
+        margin-left: 44%;
+    }
+    .icon-div2{
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        background: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/image-removebg-preview%20(4).png?v=1697215401946') no-repeat center center;
+        background-size: contain; /* You can use 'cover' or 'contain' as needed */
+        margin-top: 3%;
+        position: relative;
+        margin-left: 44%;
+    }
+    .icon-div3{
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        background: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/image-removebg-preview%20(2).png?v=1697214926337') no-repeat center center;
+        background-size: contain; /* You can use 'cover' or 'contain' as needed */
+        margin-top: 3%;
+        position: relative;
+        margin-left: 44%;
+    }
+.btn{
+    display: inline-block;
+    padding: 8px 8px; 
+    background-color: transparent; 
+    color:darkorange;
+    text-decoration: none; 
+    border: 2px solid salmon;
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-size: medium;
+}
+.btn:hover {
+    background-color: salmon; 
+    color: white;
+}
+  </style>
+</head>
+<body>
+    <div class="blog">
+        <h1>"Collaborate with Us on Our Mission to Enhance Society"</h1>
+        <h2>Feed the Needy One and Be A Real Human </h2>
+    </div>
+    <div class="join-us">
+      <h2>Join Us</h2>
+    </div>
+    <div class="container">
+        <div class="post">
+          <div class="icon-div"></div>
+            <h2>Company</h2>
+            <p>If you are registering as a company <br>please click here</p>
+            <div class="button">
+                <a href="com.html" class="btn">Register</a>
+            </div>
+        </div>
+        <div class="post">
+            <div class="icon-div2"></div>
+            <h2>Organization</h2>
+            <p>If you are registering as an organization <br>please click here</p>
+            <div class="button">
+                <a href="org.html" class="btn">Register</a>
+            </div>
+        </div>
+        
+        <div class="post">
+            <div class="icon-div3"></div>
+            <h2>Individual</h2>
+            <p>If you are registering as an individual <br>please click here</p>
+            <div class="button">
+                <a href="ko.html" class="btn">Register</a>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

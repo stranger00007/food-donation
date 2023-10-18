@@ -1,0 +1,114 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color for the entire page */
+  body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  #header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  #header .logo {
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  #menu {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  #menu .links {
+    list-style: none;
+  }
+  
+  #menu .links li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  #menu .links li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Style the 'One' section */
+  #one {
+    padding: 40px 0;
+  }
+  
+  #one h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #one p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  #one .box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style images */
+  .image {
+    margin-bottom: 20px;
+  }
+  
+  /* Add spacing and other styling as needed for different sections */
+  
+  /* Style the Google Maps iframes */
+  iframe {
+    border: 0;
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    #header .logo {
+      font-size: 28px;
+    }
+  
+    #menu {
+      padding: 10px 0;
+    }
+  
+    #menu .links {
+      text-align: center;
+    }
+  
+    #menu .links li {
+      margin-right: 10px;
+    }
+  
+    #one h2 {
+      font-size: 28px;
+    }
+  
+    #one p {
+      font-size: 16px;
+    }
+  }
+  

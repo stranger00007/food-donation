@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Blog Posts</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          background-image: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/hunger.jpg?v=1697124481529');
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          text-align: center;
+          padding: 50px;
+          min-height: 100vh;
+          background-attachment: fixed;
+      } 
+      /* Additional styles to ensure the content is readable */
+      .blog h1 {
+          font-size: 32px;
+          margin: 0;
+          position: fixed;
+          margin-left: 9%;
+          
+      }
+      .blog h2{
+        font-size: 26px;
+          margin: 0;
+          position: fixed;
+          margin-left: 15%;
+          margin-top: 3%;  
+      } 
+      .container {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px;
+          margin-top: 23%;
+          position: fixed;
+          margin-left: 24vh;
+      }
+      .post {
+          width: 30%;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 20px;
+          background-color: rgba(164, 216, 247, 0.8);
+          margin: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          transition: transform 0.3s ease; /* Add a transition for smooth scaling */
+      }
+
+      .post:hover {
+          transform: scale(1.05); /* Zoom in on hover */
+      }
+      .join-us {
+        font-size: 50px; 
+        color: #ffcc00; 
+        text-transform: uppercase;
+        margin-top: 80px; 
+        font-weight: bold;
+        cursor: pointer; 
+        position: fixed; 
+        opacity: 0; 
+        animation: fadeInOut 3s ease infinite; 
+        margin-left: 30%;
+    }
+  @keyframes fadeInOut{
+        0%, 100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    .icon-div {
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        background: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/image-removebg-preview%20(5).png?v=1697555092212') no-repeat center center;
+        background-size: contain; /* You can use 'cover' or 'contain' as needed */
+        margin-top: 1%;
+        position: relative;
+        margin-left: 40%;
+    }
+    .icon-div1{
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        background: url('https://cdn.glitch.global/7250904d-7dd6-4e66-9065-b500d5814b94/image-removebg-preview%20(6).png?v=1697555227597') no-repeat center center;
+        background-size: contain; /* You can use 'cover' or 'contain' as needed */
+        margin-top: 1%;
+        position: relative;
+        margin-left: 40%;
+    }
+.btn{
+    display: inline-block;
+    padding: 8px 8px; 
+    background-color: transparent; 
+    color:darkorange;
+    text-decoration: none; 
+    border: 2px solid salmon;
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-size: medium;
+}
+.btn:hover {
+    background-color: salmon; 
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="blog">
+        <h1>“Pay attention to the hungry, both in this country and around the world.  </h1>
+        <h2>Pay attention to the poor,Pay attention to our responsibilities for world peace.<br>We are our brother’s keeper.” – George McGovern</h2>
+    </div>
+    <div class="join-us">
+      <h2>Donate Now</h2>
+    </div>
+    <div class="container">
+        <div class="post">
+            <div class="icon-div"></div>
+            <h2>Receiver page</h2>
+            <p>This Whole idea is for You Please take this without any hesitation</p>
+            <div class="button">
+                <a href="donor.html" class="btn">Register</a>
+            </div>
+        </div>
+        
+        <div class="post">
+            <div class="icon-div1"></div>
+            <h2>Donate us</h2>
+            <p>Please Donate to Feed the Needy ones..</p>
+            <div class="button">
+                <a href="donor.html" class="btn">Register</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

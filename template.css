@@ -1,0 +1,14 @@
+/* Styles for modal */
+h1{
+    background-color:aqua;
+    height:auto;
+    background-origin: inherit;
+
+    
+}
+p{
+    background-color: antiquewhite;
+    height: 20px;
+}
+
+/* Add more styles as needed */

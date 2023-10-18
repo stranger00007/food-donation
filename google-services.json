@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310410890850",
+    "project_id": "itachi-8fd80",
+    "storage_bucket": "itachi-8fd80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310410890850:android:22ea632615f577949f8b3b",
+        "android_client_info": {
+          "package_name": "com.fire.itachi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310410890850-gbad9l6cj6iv3kp554opqs46i3fjrq7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzNE3O_niWOvQI5mAcUaTudHGYCSchJjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310410890850-gbad9l6cj6iv3kp554opqs46i3fjrq7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
